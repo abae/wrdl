@@ -1,0 +1,5 @@
+	'rblgs',
+	'mncdr',
+	'pztlg',
+	'sclts',
+	'nmtps',
