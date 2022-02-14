@@ -33,6 +33,7 @@ import {
   isWordInWordList,
   isWinningWord,
   solution,
+  fullWord,
   findFirstUnusedReveal,
 } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
@@ -111,7 +112,7 @@ function App() {
   }
 
   useEffect(() => {
-    saveGameStateToLocalStorage({ guesses, solution })
+    saveGameStateToLocalStorage({ guesses, solution, fullWord })
   }, [guesses])
 
   useEffect(() => {
@@ -293,7 +294,7 @@ function App() {
       />
       <Alert message={missingLetterMessage} isOpen={isMissingPreviousLetters} />
       <Alert
-        message={CORRECT_WORD_MESSAGE(solution)}
+        message={CORRECT_WORD_MESSAGE(solution, fullWord)}
         isOpen={isGameLost && !isRevealing}
       />
       <Alert

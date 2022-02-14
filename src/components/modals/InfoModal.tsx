@@ -10,41 +10,42 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
+	The answer is a word that is 5-letters long after getting rid of its vowels.
         Guess the word in 6 tries. After each guess, the color of the tiles will
         change to show how close your guess was to the word.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="W" status="correct" />
-        <Cell value="E" />
-        <Cell value="A" />
-        <Cell value="R" />
-        <Cell value="Y" />
-      </div>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter W is in the word and in the correct spot.
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
+        <Cell value="C" status="correct" />
+        <Cell value="M" />
         <Cell value="P" />
-        <Cell value="I" />
-        <Cell value="L" status="present" />
-        <Cell value="O" />
         <Cell value="T" />
+        <Cell value="R" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter L is in the word but in the wrong spot.
+        The letter C is in the word and in the correct spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
+        <Cell value="F" />
+        <Cell value="L" />
+        <Cell value="M" status="present" />
+        <Cell value="N" />
         <Cell value="G" />
-        <Cell value="U" status="absent" />
-        <Cell value="E" />
       </div>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        The letter U is not in the word in any spot.
+        The letter M is in the word but in the wrong spot.
+      </p>
+
+      <div className="flex justify-center mb-1 mt-4">
+        <Cell value="L" />
+        <Cell value="N" />
+        <Cell value="G" />
+        <Cell value="T" status="absent" />
+        <Cell value="H" />
+      </div>
+      <p className="text-sm text-gray-500 dark:text-gray-300">
+        The letter T is not in the word in any spot.
       </p>
     </BaseModal>
   )

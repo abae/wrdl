@@ -1,4 +1,5 @@
 import { WORDS } from '../constants/wordlist'
+import { TRUE_WORDS } from '../constants/trueWords'
 import { VALID_GUESSES } from '../constants/validGuesses'
 import { getGuessStatuses } from './statuses'
 
@@ -50,8 +51,9 @@ export const getWordOfDay = () => {
   return {
     solution: WORDS[index % WORDS.length].toUpperCase(),
     solutionIndex: index,
+    fullWord: TRUE_WORDS[index % TRUE_WORDS.length].toUpperCase(),
     tomorrow: nextday,
   }
 }
 
-export const { solution, solutionIndex, tomorrow } = getWordOfDay()
+export const { solution, solutionIndex, fullWord, tomorrow } = getWordOfDay()
